@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Vacation Booking</title>
+    <link rel="icon" type="image/png" href="images/favicon.jpg">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header-section">
+            <img src="https://bit.ly/305-vacation" alt="Tropical beach vacation" class="banner-image">
+            <div class="header-overlay">
+                <h1>Book Your Dream Vacation</h1>
+            </div>
+        </header>
+
+        <main class="form-section">
+            <form id="vacationForm" method="POST" action="/submit-booking">
+                
+                <!-- Destination Dropdown -->
+                <div class="form-group">
+                    <label for="destination">Destination</label>
+                    <select id="destination" name="destination" required>
+                        <option value="">Choose a destination...</option>
+                        <option value="bali">Bali, Indonesia</option>
+                        <option value="paris">Paris, France</option>
+                        <option value="tokyo">Tokyo, Japan</option>
+                        <option value="maldives">Maldives</option>
+                        <option value="newyork">New York City, USA</option>
+                    </select>
+                    <span class="error-message" id="destinationError"></span>
+                </div>
+
+                <!-- Departure Date -->
+                <div class="form-group">
+                    <label for="departureDate">Departure Date</label>
+                    <input type="date" id="departureDate" name="departureDate" required>
+                    <span class="error-message" id="dateError"></span>
+                </div>
+
+                <!-- Number of Travelers -->
+                <div class="form-group">
+                    <label for="travelers">Number of Travelers</label>
+                    <input type="number" id="travelers" name="travelers" min="1" value="0" required>
+                    <span class="error-message" id="travelersError"></span>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-group">
+                    <button type="submit" class="submit-btn">Find My Vacation</button>
+                </div>
+            </form>
+        </main>
+
+    <script src="js/validation.js"></script>
+</body>
+</html>
