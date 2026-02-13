@@ -25,5 +25,5 @@ app.post('/submit-booking', (req, res) => {
 
 
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+  console.log(`Server is running at http://localhost:${PORT}`);
 });

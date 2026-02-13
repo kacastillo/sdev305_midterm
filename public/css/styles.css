@@ -107,7 +107,7 @@ label {
     color: red;
     font-size: 0.85rem;
     min-height: 18px;
-    display: block;
+    display: none;        
     font-weight: 500;
 }
 
